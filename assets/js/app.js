@@ -38,8 +38,44 @@
 		}
 	}
 
+	let initTableEvent = function () {
+		if ($('.table-theme').length) {
+			$('.table-theme').each(function () {
+				// Sự kiện mouse highlight hàng trong table
+				let table = $(this);
+				table.find('tbody').mouseover(function (e) {
+					let targetMouse = $(e.target),
+						targetMouse_Row = targetMouse.closest('tr');
+
+					table.find('tr.is-highlight').removeClass('is-highlight');
+					targetMouse_Row.addClass('is-highlight');
+				});
+
+				table.find('.table-column_sort').click(function () {
+					table.find('.table-column_sort').removeClass('is-sort');
+					$(this).addClass('is-sort')
+				});
+			});
+		}
+
+		if ($('.table-sort').length) {
+			$('.table-sort').click(function () {
+				if (!$(this).hasClass('is-active')) {
+					// Active button
+					$(this).closest('.table-inner').find('.table-sort').removeClass('is-active');
+					$(this).addClass('is-active');
+
+					// Hide - Show table
+					$(this).closest('.table-inner').find('.table-theme').hide();
+					$(this).closest('.table-inner').find(`.table-${$(this).data('value')}`).show();
+				}
+			});
+		}
+	}
+
 	$(function () {
 		initSliderArtcile();
 		initSliderReview();
+		initTableEvent();
 	});
 })(jQuery);
