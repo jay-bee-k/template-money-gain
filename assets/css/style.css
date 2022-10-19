@@ -310,6 +310,17 @@ textarea:focus {
 /*=========== END BASE ===========*/
 
 /*=========== HEADER ===========*/
+.header.is-scroll {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.header .header-main {
+    background: var(--primary-color);
+}
+
 .header .header-main .header-main_grid {
     gap: 25px;
 }
@@ -345,7 +356,7 @@ textarea:focus {
     opacity: 1;
 }
 
-@media screen and (min-width: 102px) {
+@media screen and (min-width: 1023px) {
     .header .header-navigation .navigation-has_sub > a {
         position: relative;
     }
@@ -446,8 +457,189 @@ textarea:focus {
 }
 
 @media screen and (max-width: 1023px) {
-    .header {
-        display: none;
+    .header .header-main .header-main_grid {
+        padding: 10px 0;
+        justify-content: space-between;
+        position: static !important;
+    }
+
+    .header .header-logo .header-logo_img {
+        max-height: 35px;
+    }
+
+    .header .header-logo .header-logo_name {
+        font-size: 1.5em;
+        margin-left: 10px;
+    }
+
+    .header .header-hamburger .hamburger {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition-default);
+    }
+
+    .header .header-hamburger .hamburger:before,
+    .header .header-hamburger .hamburger:after,
+    .header .header-hamburger .hamburger > span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        margin: 2.5px 0;
+        background-color: var(--bs-white);
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    .header .header-hamburger .hamburger:before, .header .header-hamburger .hamburger:after {
+        content: "";
+    }
+
+    .is-navigation .header .header-hamburger .hamburger > span {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        opacity: 0;
+    }
+
+    .is-navigation .header .header-hamburger .hamburger:before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: 4px;
+    }
+
+    .is-navigation .header .header-hamburger .hamburger:after {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        margin-top: -10px;
+    }
+
+    .is-navigation .header .header-navigation {
+        transform: translateY(0);
+    }
+
+    .header .header-navigation {
+        position: absolute;
+        max-height: calc(100vh - var(--header-height));
+        height: 100vh;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bs-white);
+        margin-left: 0;
+        transition: .7s all ease-in-out;
+        transform: translateY(-150%);
+        z-index: -1;
+    }
+
+    .header .header-navigation > ul {
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+        gap: 0;
+    }
+
+    .header .header-navigation > ul > li {
+        width: 100%;
+    }
+
+    .header .header-navigation > ul > li > a {
+        width: 100%;
+        color: var(--bs-gray-900);
+        padding: 15px;
+        font-size: 1.3em;
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header .header-navigation > ul > li + li {
+        border-top: 1px solid var(--bs-gray-200);
+    }
+
+    .header .header-navigation > ul > li.navigation-has_sub > a:after {
+        display: inline-flex;
+        vertical-align: middle;
+        font-size: 1.6em;
+        color: var(--bs-gray-900);
+        content: "\f107";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 300;
+        transition: var(--transition-default);
+        line-height: 0;
+    }
+
+    .header .header-navigation > ul > li.navigation-has_sub > a[aria-expanded=true] {
+        color: var(--primary-color);
+    }
+
+    .header .header-navigation > ul > li.navigation-has_sub > a[aria-expanded=true]:after {
+        transform: rotate(180deg);
+        color: var(--primary-color);
+    }
+
+    .header .header-navigation .navigation-sub .navigation-sub_wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        background: var(--bs-gray-100);
+        border-top: 1px solid var(--bs-gray-200);
+    }
+
+    .header .header-navigation .navigation-sub .navigation-sub_item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .header .header-navigation .navigation-sub .navigation-sub_item .sub-item_title {
+        color: var(--bs-gray-800);
+        font-weight: 700;
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    .header .header-navigation .navigation-sub .navigation-sub_item .sub-item_title > a {
+        color: inherit;
+    }
+
+    .header .header-navigation .navigation-sub .navigation-sub_item .sub-item_title > a:hover {
+        color: var(--primary-color);
+    }
+
+    .header .header-navigation .navigation-sub .navigation-sub_item .sub-item_column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .header .header-navigation .navigation-sub .navigation-sub_item .sub-item_column > a {
+        color: var(--bs-gray-700);
+        font-size: 1.15em;
+        align-self: flex-start;
+        width: calc(50% - 15px);
+    }
+
+    .header .header-navigation .navigation-sub .navigation-sub_item .sub-item_column > a:hover {
+        color: var(--primary-color);
+    }
+
+    .header .header-user .header-user_item .header-user_item-btn {
+        width: 32px;
+        height: 32px;
     }
 }
 
@@ -1236,7 +1428,7 @@ textarea:focus {
     color: var(--secondary-color);
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px){
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .footer .footer-social > span {
         font-size: 1em;
     }

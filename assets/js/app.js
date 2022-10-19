@@ -2,6 +2,48 @@
     'use strict';
     let windowWidth = $(window).width();
 
+    let initNavigationMobiel = function () {
+        if (windowWidth < 1023) {
+            $('#header .header-navigation').css('--header-height', $('#header').height() + 'px');
+
+            if ($("#header .header-navigation > ul > li > .navigation-sub").length) {
+                $("#header .header-navigation").attr('id', 'hasMenu');
+                $("#header .header-navigation > ul > li > .navigation-sub").each(function (index) {
+                    $(this).prev().attr({
+                        "href": "#subMenu" + index,
+                        "data-bs-toggle": "collapse"
+                    });
+                    $(this).attr({
+                        "id": "subMenu" + index,
+                        "class": "collapse navigation-sub",
+                        "data-bs-parent": "#hasMenu"
+                    });
+                })
+            }
+
+            $('#call-navigation').click(function () {
+                if (!$('body').hasClass('is-navigation')) {
+                    $('body').addClass('is-navigation');
+                } else {
+                    $("#header .header-navigation > ul > li > .navigation-sub").collapse('hide');
+                    $('body').removeClass('is-navigation');
+                }
+            });
+        }
+    }
+
+    let initHeaderScroll = function () {
+        if ($('body').height() / $(window).height() > 1.3) {
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 0) {
+                    $('#header').addClass('is-scroll');
+                } else {
+                    $('#header').removeClass('is-scroll');
+                }
+            });
+        }
+    }
+
     let initSliderCore = function () {
         if ($('#slider-core').length > 0) {
             new Swiper('#slider-core .swiper', {
@@ -127,6 +169,8 @@
     }
 
     $(function () {
+        initNavigationMobiel();
+        initHeaderScroll();
         initSliderCore();
         initSliderArtcile();
         initSliderReview();
