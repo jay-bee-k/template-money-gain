@@ -1060,6 +1060,13 @@ textarea:focus {
     color: #da1414;
 }
 
+@media screen and (max-width: 991px) {
+    .table-inner .table-tab .table-sort {
+        font-size: 1.1em;
+        width: 140px;
+        height: 34px;
+    }
+}
 @media screen and (max-width: 768px) {
     .table-inner .table-wrap .table {
         font-size: 1em;
