@@ -20,6 +20,14 @@
                     delay: 10000,
                     disableOnInteraction: false,
                 },
+                breakpoints: {
+                    1199: {
+                        autoHeight: 0
+                    },
+                    320: {
+                        autoHeight: 1
+                    },
+                },
             });
         }
     }
@@ -37,6 +45,21 @@
                 breakpoints: {
                     1200: {
                         slidesPerView: 4,
+                    },
+                    991: {
+                        slidesPerView: 3.3,
+                    },
+                    768: {
+                        slidesPerView: 2.3,
+                    },
+                    525: {
+                        slidesPerView: 1.5,
+                    },
+                    375: {
+                        slidesPerView: 1.3,
+                    },
+                    320: {
+                        slidesPerView: 1,
                     },
                 },
             });
@@ -56,6 +79,12 @@
                 breakpoints: {
                     1200: {
                         slidesPerView: 3,
+                    },
+                    991: {
+                        slidesPerView: 3,
+                    },
+                    600: {
+                        slidesPerView: 2,
                     },
                 },
             });
