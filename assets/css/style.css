@@ -862,26 +862,31 @@ textarea:focus {
 
 .core-item .core-content .core-content_desc .core-content_desc--list .content-desc_list--item {
     position: relative;
-    font-size: 1.1em;
+    font-size: 1.15em;
+    line-height: 1.5;
     color: #232323;
     display: flex;
     gap: 8px;
 }
 
-
 .core-item .core-content .core-content_desc .core-content_desc--list .content-desc_list--item:before {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
     width: 24px;
     height: 24px;
+    font-size: 12px;
     background-color: var(--primary-color);
     color: var(--bs-white);
     border-radius: 50%;
     font-family: "Font Awesome 5 Pro";
+    content: "\f00c";
+    font-weight: 300;
 }
 
 .core-item .core-content .core-content_link {
-    font-size: 1.1em;
+    font-size: 1.15em;
     color: #232323;
 }
 
