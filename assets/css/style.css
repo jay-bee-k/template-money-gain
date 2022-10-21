@@ -277,6 +277,22 @@ textarea:focus {
 	}
 }
 
+.section-heading_decor {
+	margin-bottom: 20px;
+}
+
+.section-heading_decor .title {
+	background-color: var(--primary-color);
+	color: var(--bs-white);
+	display: inline-flex;
+	vertical-align: middle;
+	padding: 10px 15px;
+	font-size: 1.5em;
+	line-height: 1.5;
+	font-weight: 700;
+	width: max-content;
+}
+
 .section-heading {
 	gap: 10px;
 	max-width: 768px;
@@ -305,6 +321,11 @@ textarea:focus {
 		font-size: 1.6em;
 		line-height: 1.3;
 	}
+
+	.section-heading_decor .title {
+		font-size: 1.2em;
+	}
+
 }
 
 /*=========== END BASE ===========*/
