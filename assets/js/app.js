@@ -2,7 +2,7 @@
 	'use strict';
 	let windowWidth = $(window).width();
 
-	let initNavigationMobiel = function () {
+	let initNavigationMobile = function () {
 		if (windowWidth < 1023) {
 			$('#header .header-navigation').css('--header-height', $('#header').height() + 'px');
 
@@ -190,7 +190,7 @@
 	}
 
 	$(function () {
-		initNavigationMobiel();
+		initNavigationMobile();
 		initHeaderScroll();
 		initSetTimeMarquee();
 		initSliderCore();
