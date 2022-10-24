@@ -3,7 +3,7 @@
     let windowWidth = $(window).width();
 
     let initNavigationMobile = function () {
-        if (windowWidth < 1023) {
+        if (windowWidth < 1200) {
             $('#header .header-navigation').css('--header-height', $('#header').height() + 'px');
 
             if ($("#header .header-navigation > ul > li > .navigation-sub").length) {
@@ -32,7 +32,7 @@
                 $("#header .header-navigation > ul > li .navigation-sub_item").each(function (index) {
                     if ($(this).find('.sub-item_column').length && $(this).find('.sub-item_title').length) {
                         $(this).find('.sub-item_title').attr({
-                            "href": "#subMenu" + index, "data-bs-toggle": "collapse"
+                            "href": "#subMenu" + index, "data-bs-toggle": "collapse", "aria-expanded": "false"
                         }).append("<i class='fas fa-angle-down'></i>");
 
                         let elmWrap = `<div class="collapse" id="subMenu${index}" data-bs-parent="#hasMenu"></div>`;
@@ -242,10 +242,8 @@
                         $('.handle-videoSidebar').parent().removeClass('is-active');
                         elmParent.addClass('is-active');
 
-                        let videoID = $(this).data('id'),
-                            videoTitle = $(this).data('title'),
-                            videoCreate = $(this).data('create'),
-                            videoDesc = $(this).data('desc');
+                        let videoID = $(this).data('id'), videoTitle = $(this).data('title'),
+                            videoCreate = $(this).data('create'), videoDesc = $(this).data('desc');
 
                         $('#video-setID').attr('src', 'https://www.youtube.com/embed/' + videoID);
                         $('#video-setTitle').text(videoTitle);
@@ -282,9 +280,7 @@
                 if (!target.hasClass('is-floating')) {
                     target.addClass('is-floating');
                     $('body').css({
-                        'overflow': 'hidden',
-                        ' height': '100vh',
-                        'position': 'fixed'
+                        'overflow': 'hidden', ' height': '100vh', 'position': 'fixed'
                     })
                 } else {
                     target.removeClass('is-floating');
