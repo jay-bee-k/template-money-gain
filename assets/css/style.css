@@ -2038,8 +2038,8 @@ textarea:focus {
 .section-videos {
     background: var(--primary-color);
     background: #DE6262; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, var(--primary-color), #6a2b8f); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, var(--primary-color), #6a2b8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, var(--primary-color), #913ec2); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--primary-color), #913ec2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -2262,6 +2262,7 @@ textarea:focus {
     line-height: 1.25;
     font-weight: bold;
 }
+
 
 .section-videos .videos-inner .videos-categories .videos-categories_list {
     display: flex;
