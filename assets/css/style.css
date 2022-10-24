@@ -1212,6 +1212,7 @@ textarea:focus {
         height: 100%;
         overflow-y: auto;
         gap: 0;
+        background: var(--bs-white);
     }
 
     .header .header-navigation > ul > li {
