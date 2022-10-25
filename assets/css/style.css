@@ -902,6 +902,26 @@ textarea:focus {
     display: none;
 }
 
+@media screen and (min-width: 1919px) {
+    .header .container-custom {
+        max-width: 85%;
+    }
+
+    .header .header-navigation {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .header .container-custom {
+        max-width: 92%;
+    }
+
+    .header .header-navigation {
+        margin-left: 20px;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .header .header-navigation > ul {
         gap: 0;
@@ -1181,6 +1201,14 @@ textarea:focus {
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1455px) {
+    .header .container-custom {
+        max-width: 100%;
+    }
+
+    .header .header-navigation {
+        margin-left: 0;
+    }
+
     .header .header-main .header-main_grid {
         gap: 15px;
     }
