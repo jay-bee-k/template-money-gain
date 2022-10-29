@@ -174,7 +174,7 @@
                     $(this).addClass('is-active');
 
                     // Hide - Show table
-                    $(this).closest('.table-inner').find('.table-theme').hide();
+                    $(this).closest('.table-inner').find('.table-content').hide();
                     $(this).closest('.table-inner').find(`.table-${$(this).data('value')}`).show();
                 }
             });
