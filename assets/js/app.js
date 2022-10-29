@@ -163,10 +163,6 @@
                     table.find('.table-column_sort').removeClass('is-sort');
                     $(this).addClass('is-sort')
                 });
-
-                $(window).on('load resize', function () {
-                    table.parent().css('--max-height', table.find('tbody tr').height() * 10 + 'px');
-                });
             });
         }
 
@@ -180,8 +176,6 @@
                     // Hide - Show table
                     $(this).closest('.table-inner').find('.table-content').hide();
                     $(this).closest('.table-inner').find(`.table-${$(this).data('value')}`).show();
-
-                    $(this).closest('.table-inner').find(`.table-${$(this).data('value')} .table-wrap`).css('--max-height', $(this).closest('.table-inner').find(`.table-${$(this).data('value')} tbody tr`).height() * 10 + 'px');
                 }
             });
         }
