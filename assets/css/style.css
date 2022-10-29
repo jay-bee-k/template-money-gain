@@ -445,7 +445,7 @@ textarea:focus {
 	color: var(--bs-white);
 	display: inline-flex;
 	vertical-align: middle;
-	padding: 10px 15px;
+	padding: 6px 15px;
 	font-size: 1.5em;
 	line-height: 1.5;
 	font-weight: 700;
