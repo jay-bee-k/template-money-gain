@@ -1880,7 +1880,7 @@ textarea:focus {
 }
 
 .table-inner .table-tab {
-    gap: 15px;
+    gap: 10px;
 }
 
 .table-inner .table-tab .table-sort {
@@ -1942,7 +1942,7 @@ textarea:focus {
 
 .table-inner .table-wrap .table thead th {
     font-size: .9em;
-    font-weight: 500;
+    font-weight: 700;
     color: var(--bs-gray-700);
     cursor: pointer;
 }
@@ -2012,8 +2012,36 @@ textarea:focus {
     color: #fd2c2c;
 }
 
-.table-inner .table-link {
+.table-inner .table-content > .table-link {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.table-inner .table-content > .table-link > a {
     font-size: 1.05em;
+}
+
+.table-inner .table-content {
+    margin: 0 -10px;
+}
+
+.table-inner .table-content .table-wrap {
+    padding: 0 10px;
+    max-height: var(--max-height);
+    overflow-y: auto;
+}
+
+.table-inner .table-content .table-wrap::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.table-inner .table-content .table-wrap::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.table-inner .table-content .table-wrap::-webkit-scrollbar-thumb {
+    background: #cdcbcb;
 }
 
 @media screen and (max-width: 991px) {
@@ -2024,7 +2052,7 @@ textarea:focus {
 
 @media screen and (max-width: 768px) {
     .table-inner .table-wrap .table,
-    .table-inner .table-link {
+    .table-inner .table-content > .table-link > a {
         font-size: 1em;
     }
 
