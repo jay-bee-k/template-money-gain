@@ -1523,7 +1523,7 @@ textarea:focus {
     height: 100%;
     top: 0;
     left: 0;
-    opacity: .05;
+    opacity: .1;
 }
 
 .section-hero .section-hero_inner {
@@ -2104,6 +2104,10 @@ textarea:focus {
     }
 }
 
+.section-icons .section-heading_sub {
+    margin-top: 25px;
+}
+
 /*=========== END ICONS ===========*/
 
 /*=========== CORE ===========*/
@@ -2196,6 +2200,7 @@ textarea:focus {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.5;
+    margin-top: 5px;
 }
 
 .core-item .core-content .core-content_link .button-theme {
