@@ -1094,6 +1094,10 @@ textarea:focus {
         pointer-events: none;
     }
 
+    .header .header-navigation .navigation-sub .navigation-sub_item.position-change .sub-item_column--wrap:before {
+        top: var(--top);
+    }
+
     .header .header-navigation .navigation-sub .navigation-sub_item .sub-item_column--wrap::after {
         position: absolute;
         top: 0;
@@ -1129,7 +1133,7 @@ textarea:focus {
     .header .header-navigation .navigation-sub .navigation-sub_item .sub-item_column .sub-item_column--item > a {
         align-items: center;
         justify-content: space-between;
-        padding: 12px 15px;
+        padding: 10px 15px;
         border-radius: 4px;
         color: var(--bs-gray-800);
         font-size: 1.05em;

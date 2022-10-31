@@ -39,6 +39,17 @@
                                 $(this).parents('.sub-item_column--item').children('a').append("<i class='fas fa-angle-right'></i>")
                             });
                         }
+
+                        if (index / $(this).parent('.navigation-sub_wrap').find('.navigation-sub_item').length > 0.25) {
+                            let itemFirst = $(this).parent('.navigation-sub_wrap').find('.sub-item_column--item').first().height();
+                            console.log(itemFirst)
+                            $(this).addClass('position-change').find('.sub-item_column--wrap').css(
+                                {
+                                    'top': parseFloat(-20 - itemFirst) + 'px',
+                                    '--top': parseFloat(35 + itemFirst) + 'px',
+                                }
+                            );
+                        }
                     }
                 })
             }
