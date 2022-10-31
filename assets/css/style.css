@@ -1947,6 +1947,21 @@ textarea:focus {
     fill: var(--bs-white);
 }
 
+.table-inner .table-wrap::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    margin-top: -1px;
+}
+
+.table-inner .table-wrap::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.table-inner .table-wrap::-webkit-scrollbar-thumb {
+    background: #cdcbcb;
+    border-radius: 5px;
+}
+
 .table-inner .table-wrap .table {
     font-size: 1.05em;
     margin-bottom: 0;
