@@ -235,15 +235,17 @@
                 elms.each(function (index, elm) {
                     let queryElm = $(elm), getHeightImage = parseFloat(queryElm.find('.core-image').height()),
                         getHeightContent = parseFloat(queryElm.find('.core-content').height());
-                    if (getHeightContent / getHeightImage > 1.1) {
+                    if (getHeightContent / getHeightImage > 1.3) {
                         let titleHeight = queryElm.find('.core-content').find('.core-content_title').height() ?? 0,
                             subHeight = queryElm.find('.core-content').find('.core-content_sub').height() ?? 0,
                             sloganHeight = queryElm.find('.core-content').find('.core-content_link').height() ?? 0;
-                        let limitHeight = getHeightImage - titleHeight - subHeight - sloganHeight;
+                        let limitHeight = getHeightImage - titleHeight - subHeight + 32;
+                        if (windowWidth > 1400) {
+                            limitHeight = getHeightImage - titleHeight - subHeight - sloganHeight;
+                        }
 
                         queryElm.find('.core-content').find('.core-content_desc--list').css({
-                            '--limit-height': limitHeight + 'px',
-                            '--max-height': getHeightContent + 'px'
+                            '--limit-height': limitHeight + 'px', '--max-height': getHeightContent + 'px'
                         });
                         queryElm.find('.core-content').find('.core-content_desc').addClass('less-more').append(renderReadmore);
                     }
