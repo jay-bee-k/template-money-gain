@@ -1966,6 +1966,7 @@ textarea:focus {
     border-top: 1px solid #ddd;
     line-height: 1.5;
     color: var(--bs-gray-900);
+    white-space: nowrap;
 }
 
 .table-inner .table-wrap .table th {
@@ -2043,10 +2044,6 @@ textarea:focus {
 
     .table-inner .table-wrap .table th, .table-inner .table-wrap .table td {
         padding: 6px;
-    }
-
-    .table-inner .table-wrap {
-        white-space: nowrap;
     }
 }
 
