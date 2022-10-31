@@ -210,7 +210,6 @@
                     let queryElm = $(elm), getHeightElm = parseFloat(queryElm.height()),
                         getLineHeightElm = parseFloat(queryElm.css('line-height').split('px')[0]),
                         lines = Math.round(getHeightElm / getLineHeightElm);
-
                     if (lines > 5) {
                         queryElm.addClass('less-more').css({
                             '--limit-height': getLineHeightElm * 5 + 'px', '--max-height': getHeightElm + 'px',
@@ -222,6 +221,37 @@
 
             $('.initSetReadMore').parent().on('click', '.handleReadmore', function () {
                 $(this).parent().find('.less-more').removeClass('less-more').addClass('loaded');
+                $(this).remove();
+            });
+        }
+    }
+
+    let initSetLine = function () {
+        if (windowWidth > 1199 && $('.initSetLine').length) {
+            let elms = $('.initSetLine'),
+                renderReadmore = "<a href='javascript:void(0)' class='handleReadline'>Xem thêm</a>";
+
+            $(window).on('load', function () {
+                elms.each(function (index, elm) {
+                    let queryElm = $(elm), getHeightImage = parseFloat(queryElm.find('.core-image').height()),
+                        getHeightContent = parseFloat(queryElm.find('.core-content').height());
+                    if (getHeightContent / getHeightImage > 1.1) {
+                        let titleHeight = queryElm.find('.core-content').find('.core-content_title').height() ?? 0,
+                            subHeight = queryElm.find('.core-content').find('.core-content_sub').height() ?? 0,
+                            sloganHeight = queryElm.find('.core-content').find('.core-content_link').height() ?? 0;
+                        let limitHeight = getHeightImage - titleHeight - subHeight - sloganHeight;
+
+                        queryElm.find('.core-content').find('.core-content_desc--list').css({
+                            '--limit-height': limitHeight + 'px',
+                            '--max-height': getHeightContent + 'px'
+                        });
+                        queryElm.find('.core-content').find('.core-content_desc').addClass('less-more').append(renderReadmore);
+                    }
+                });
+            });
+
+            $('.initSetLine').parent().on('click', '.handleReadline', function () {
+                $(this).parent().removeClass('less-more').addClass('loaded');
                 $(this).remove();
             });
         }
@@ -301,6 +331,7 @@
         initTableEvent();
         initScrollSpyItem();
         initSetReadMore();
+        initSetLine();
         initHandleVideo();
         initQuickSearch();
         handleCallFloating();

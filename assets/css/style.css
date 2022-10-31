@@ -328,7 +328,8 @@ textarea:focus {
     overflow: hidden;
 }
 
-.handleReadmore {
+.handleReadmore,
+.handleReadline {
     position: relative;
     z-index: 3;
     margin-top: 5px;
@@ -338,7 +339,8 @@ textarea:focus {
     text-decoration: underline;
 }
 
-.handleReadmore:hover {
+.handleReadmore:hover,
+.handleReadline:hover {
     color: var(--primary-hover);
     text-decoration: underline;
 }
@@ -1127,7 +1129,7 @@ textarea:focus {
     .header .header-navigation .navigation-sub .navigation-sub_item .sub-item_column .sub-item_column--item > a {
         align-items: center;
         justify-content: space-between;
-        padding: 10px 15px;
+        padding: 12px 15px;
         border-radius: 4px;
         color: var(--bs-gray-800);
         font-size: 1.05em;
@@ -1782,6 +1784,16 @@ textarea:focus {
     fill: var(--bs-white);
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1499px) {
+    .section-hero .hero-wrap .hero-content .hero-content_link {
+        font-size: 1.2em;
+    }
+
+    .section-hero .hero-wrap .hero-content .hero-content_link .button-theme {
+        font-size: .8em;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .section-hero {
         padding-top: 30px;
@@ -2102,7 +2114,8 @@ textarea:focus {
 }
 
 .section-icons .section-heading_sub {
-    margin-top: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /*=========== END ICONS ===========*/
@@ -2155,6 +2168,16 @@ textarea:focus {
     color: var(--secondary-color);
     font-weight: 700;
     text-align: justify;
+}
+
+.core-item .core-content .core-content_desc--list {
+    max-height: var(--limit-height);
+    overflow: hidden;
+}
+
+.core-item .core-content .loaded .core-content_desc--list {
+    max-height: var(--max-height);
+    overflow: hidden;
 }
 
 .core-item .core-content .core-content_desc,
