@@ -267,7 +267,7 @@
 
 	--transition-default: .3s all ease-in-out;
 	--size-theme: 14px;
-	--font-theme: "Roboto", sans-serif;
+	--font-theme: "Averta";
 	--font-century-gothic: "Century Gothic"
 }
 
@@ -643,7 +643,7 @@ textarea:focus {
 }
 
 .header .header-top .header-marquee {
-	font-family: "Averta Cyrillic";
+	font-family: "Roboto", sans-serif;
 	display: flex;
 	gap: 25px;
 	animation: scroll-marquee calc(var(--marquee-elm_show) * 4s) linear infinite;
@@ -2003,6 +2003,7 @@ textarea:focus {
 }
 
 .table-inner {
+	font-family: 'Roboto', sans-serif;
 	gap: 10px;
 	padding: 10px;
 	background-color: var(--bs-white);
