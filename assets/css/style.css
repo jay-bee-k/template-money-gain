@@ -140,6 +140,119 @@
 	font-style: italic;
 }
 
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Black.otf");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Black-Italic.otf");
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-ExtraBold.otf");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-ExtraBold-Italic.otf");
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Bold.otf");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Bold-Italic.otf");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-SemiBold.otf");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-SemiBold-Italic.otf");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Regular.otf");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Regular-Italic.otf");
+	font-weight: 400;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Light.otf");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Light-Italic.otf");
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Thin.otf");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Thin-Italic.otf");
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Extra-Thin.otf");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Averta Cyrillic";
+	src: url("../fonts/averta/Averta-Cyrillic-Extra-Thin-Italic.otf");
+	font-weight: 100;
+	font-style: italic;
+}
+
 :root {
 	--primary-color: #4E186E;
 	--primary-rgb: 78, 24, 100;
@@ -530,6 +643,7 @@ textarea:focus {
 }
 
 .header .header-top .header-marquee {
+	font-family: "Averta Cyrillic";
 	display: flex;
 	gap: 25px;
 	animation: scroll-marquee calc(var(--marquee-elm_show) * 4s) linear infinite;
@@ -1598,7 +1712,6 @@ textarea:focus {
 	padding-right: 30px;
 	gap: 25px;
 	line-height: 1.5;
-	text-align: justify;
 }
 
 .section-hero .hero-wrap .hero-content .hero-content_title {
@@ -1606,6 +1719,7 @@ textarea:focus {
 	font-weight: 700;
 	line-height: 1.2;
 	color: var(--secondary-color);
+	text-align: justify;
 }
 
 .section-hero .hero-wrap .hero-content .hero-content_title span {
@@ -1615,10 +1729,11 @@ textarea:focus {
 .section-hero .hero-wrap .hero-content .hero-content_desc {
 	font-size: 1.15em;
 	color: var(--bs-gray-800);
+	text-align: justify;
 }
 
 .section-hero .hero-wrap .hero-content .hero-content_link {
-	font-size: 1.5em;
+	font-size: 1.45em;
 	line-height: 1.5;
 	font-weight: 700;
 	color: var(--bs-gray-900);
