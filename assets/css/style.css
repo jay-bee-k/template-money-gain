@@ -267,7 +267,7 @@
 
 	--transition-default: .3s all ease-in-out;
 	--size-theme: 14px;
-	--font-theme: "Averta";
+	--font-theme: "Roboto", sans-serif;
 	--font-century-gothic: "Century Gothic"
 }
 
