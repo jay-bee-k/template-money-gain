@@ -899,7 +899,7 @@ textarea:focus {
 }
 
 .header .header-navigation > ul > li > a {
-    font-size: 1em;
+    font-size: 1.1em;
     color: var(--bs-white);
     padding: 17px 0;
     text-transform: uppercase;
@@ -1252,7 +1252,7 @@ textarea:focus {
     }
 
     .header .header-navigation > ul > li > a {
-        font-size: .9em;
+        font-size: .95em;
         white-space: nowrap;
     }
 
